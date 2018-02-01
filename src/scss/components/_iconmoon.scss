@@ -1,0 +1,219 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('#{$icomoon-font-path}/icomoon.eot?5x9foq');
+  src:  url('#{$icomoon-font-path}/icomoon.eot?5x9foq#iefix') format('embedded-opentype'),
+  url('#{$icomoon-font-path}/icomoon.ttf?5x9foq') format('truetype'),
+  url('#{$icomoon-font-path}/icomoon.woff?5x9foq') format('woff'),
+  url('#{$icomoon-font-path}/icomoon.svg?5x9foq#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bar {
+  &:before {
+    content: $icon-bar;
+  }
+}
+.icon-bear {
+  &:before {
+    content: $icon-bear;
+  }
+}
+.icon-champane {
+  &:before {
+    content: $icon-champane;
+  }
+}
+.icon-circle {
+  &:before {
+    content: $icon-circle;
+  }
+}
+.icon-cloakroom {
+  &:before {
+    content: $icon-cloakroom;
+  }
+}
+.icon-club {
+  &:before {
+    content: $icon-club;
+  }
+}
+.icon-cross_arrows {
+  &:before {
+    content: $icon-cross_arrows;
+  }
+}
+.icon-drinks {
+  &:before {
+    content: $icon-drinks;
+  }
+}
+.icon-female .path1 {
+  &:before {
+    content: $icon-female-path1;
+    color: rgb(27, 27, 27);
+  }
+}
+.icon-female .path2 {
+  &:before {
+    content: $icon-female-path2;
+    margin-left: -0.79296875em;
+    color: rgb(30, 18, 62);
+  }
+}
+.icon-female .path3 {
+  &:before {
+    content: $icon-female-path3;
+    margin-left: -0.79296875em;
+    color: rgb(30, 18, 62);
+  }
+}
+.icon-female .path4 {
+  &:before {
+    content: $icon-female-path4;
+    margin-left: -0.79296875em;
+    color: rgb(30, 18, 62);
+  }
+}
+.icon-female .path5 {
+  &:before {
+    content: $icon-female-path5;
+    margin-left: -0.79296875em;
+    color: rgb(30, 18, 62);
+  }
+}
+.icon-female .path6 {
+  &:before {
+    content: $icon-female-path6;
+    margin-left: -0.79296875em;
+    color: rgb(30, 18, 62);
+  }
+}
+.icon-male .path1 {
+  &:before {
+    content: $icon-male-path1;
+    color: rgb(27, 27, 27);
+  }
+}
+.icon-male .path2 {
+  &:before {
+    content: $icon-male-path2;
+    margin-left: -0.8466796875em;
+    color: rgb(30, 18, 62);
+  }
+}
+.icon-male .path3 {
+  &:before {
+    content: $icon-male-path3;
+    margin-left: -0.8466796875em;
+    color: rgb(30, 18, 62);
+  }
+}
+.icon-male .path4 {
+  &:before {
+    content: $icon-male-path4;
+    margin-left: -0.8466796875em;
+    color: rgb(30, 18, 62);
+  }
+}
+.icon-male .path5 {
+  &:before {
+    content: $icon-male-path5;
+    margin-left: -0.8466796875em;
+    color: rgb(30, 18, 62);
+  }
+}
+.icon-male .path6 {
+  &:before {
+    content: $icon-male-path6;
+    margin-left: -0.8466796875em;
+    color: rgb(30, 18, 62);
+  }
+}
+.icon-male .path7 {
+  &:before {
+    content: $icon-male-path7;
+    margin-left: -0.8466796875em;
+    color: rgb(30, 18, 62);
+  }
+}
+.icon-male .path8 {
+  &:before {
+    content: $icon-male-path8;
+    margin-left: -0.8466796875em;
+    color: rgb(30, 18, 62);
+  }
+}
+.icon-male .path9 {
+  &:before {
+    content: $icon-male-path9;
+    margin-left: -0.8466796875em;
+    color: rgb(30, 18, 62);
+  }
+}
+.icon-male .path10 {
+  &:before {
+    content: $icon-male-path10;
+    margin-left: -0.8466796875em;
+    color: rgb(27, 27, 27);
+  }
+}
+.icon-male .path11 {
+  &:before {
+    content: $icon-male-path11;
+    margin-left: -0.8466796875em;
+    color: rgb(30, 18, 62);
+  }
+}
+.icon-parking {
+  &:before {
+    content: $icon-parking;
+  }
+}
+.icon-reseipt {
+  &:before {
+    content: $icon-reseipt;
+  }
+}
+.icon-romb {
+  &:before {
+    content: $icon-romb;
+  }
+}
+.icon-shot {
+  &:before {
+    content: $icon-shot;
+  }
+}
+.icon-star {
+  &:before {
+    content: $icon-star;
+  }
+}
+.icon-table_service {
+  &:before {
+    content: $icon-table_service;
+  }
+}
+.icon-tickets {
+  &:before {
+    content: $icon-tickets;
+  }
+}
+

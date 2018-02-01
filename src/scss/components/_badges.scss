@@ -1,0 +1,23 @@
+.badge__holder {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #ee5a22;
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+  color: #fff;
+  font-size: 50px;
+  //position: absolute;
+  //top: -30px;
+  //left: 43px;
+  //position: relative;
+  //top: -50px;
+  //left: -30px;
+  transition: all .3s ease-in-out;
+  //@include media('<1120px') {
+  //  width: 72px;
+  //  height: 72px;
+  //  font-size: 30px;
+  //}
+}

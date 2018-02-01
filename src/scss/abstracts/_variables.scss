@@ -1,0 +1,99 @@
+// Global variables
+//
+// Base font styles for headings and links.
+
+// For headers
+$headings: (
+  'sizes': (
+    'h1-font-size': 30px,
+    'h2-font-size': 27px,
+    'h3-font-size': 24px,
+    'h4-font-size': 21px,
+    'h5-font-size': 17px,
+    'h6-font-size': 15px
+  ),
+  'fonts': (
+    'headings-font-family': inherit,
+    'headings-color': inherit
+  )
+);
+
+// Global vars for body typography
+$base: (
+  'base-font-sans-serif': unquote(" Open Sans, 'Arial', 'Helvetica Neue', Helvetica, sans-serif"),
+  //'base-font-serif': unquote("'Times New Roman', Times, Baskerville, Georgia, serif"),
+  'base-text-color': #000,
+  'base-background-color': #fff,
+  'base-link-color':#39f,
+  'base-font-size': 16px,
+  'base-line-height': 1.2,
+  'base-font-family': unquote("Open Sans, 'Arial', 'Helvetica Neue', Helvetica, sans-serif"),
+  'vertical-rhythm': '(map-get($base, base-line-height) * 1em)',
+  'base-min-width': 320px
+);
+
+// Vars for forms
+$forms: (
+  'form-element-padding': unquote("0.4em 0.7em"),
+  'form-element-border-color': #999,
+  'form-element-focus-border-color': #000,
+  'placeholder-color': #999
+);
+
+// Breakpoints for include media mixin
+$breakpoints: (
+  'phone': 320px,
+  'tablet': 768px,
+  'desktop': 980px,
+  'widescreen': 1200px
+);
+
+// Keywords for include media mixin
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+//iconmoon
+$icomoon-font-path: "../fonts" !default;
+//$fa-font-path: "../fonts";
+
+$icon-bar: "\e900";
+$icon-bear: "\e901";
+$icon-champane: "\e902";
+$icon-circle: "\e903";
+$icon-cloakroom: "\e904";
+$icon-club: "\e905";
+$icon-cross_arrows: "\e906";
+$icon-drinks: "\e907";
+$icon-female-path1: "\e908";
+$icon-female-path2: "\e909";
+$icon-female-path3: "\e90a";
+$icon-female-path4: "\e90b";
+$icon-female-path5: "\e90c";
+$icon-female-path6: "\e90d";
+$icon-male-path1: "\e90e";
+$icon-male-path2: "\e90f";
+$icon-male-path3: "\e910";
+$icon-male-path4: "\e911";
+$icon-male-path5: "\e912";
+$icon-male-path6: "\e913";
+$icon-male-path7: "\e914";
+$icon-male-path8: "\e915";
+$icon-male-path9: "\e916";
+$icon-male-path10: "\e917";
+$icon-male-path11: "\e918";
+$icon-parking: "\e919";
+$icon-reseipt: "\e91a";
+$icon-romb: "\e91b";
+$icon-shot: "\e91c";
+$icon-star: "\e91d";
+$icon-table_service: "\e91e";
+$icon-tickets: "\e91f";
+
+

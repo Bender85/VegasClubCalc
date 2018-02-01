@@ -1,0 +1,38 @@
+.btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  display: inline-block;
+  background: transparent;
+  &.smallBorderRadius {
+    border-radius: 3px;
+  }
+  //&.fullBorderRadius {
+  //  border-radius: 50%;
+  //}
+  &.linkBorder {
+    border: 1px solid #e0e0e0;
+  }
+  &.compareBtn {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    background: #eb4420;
+    border-radius: 10% / 50%;
+    width: 272px;
+    height: 52px;
+    .icon-bar {
+      margin: 0 18px 0 0;
+    }
+  }
+  &.btnLink {
+    color: #ee5a22;
+    font-weight: 600;
+    font-size: 13px;
+    text-decoration: none;
+    width: 177px;
+    height: 40px;
+    display: inline-block;
+    line-height: 40px;
+  }
+}

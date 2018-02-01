@@ -1,0 +1,147 @@
+.formCounterArea {
+  display: flex;
+  align-items: flex-start;
+  @include media('<1120px') {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.formCounter {
+  position: relative;
+  background: #f3ecef;
+  border-radius: 20px;
+  width: 155px;
+  height: 155px;
+  //flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include media('<1120px') {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 0;
+    background: transparent;
+    align-items: center;
+  }
+  &:not(:first-child) {
+    margin: 0 0 0 20px;
+    @include media('<1120px') {
+      flex-direction: row;
+      margin: 0;
+      border-top: 1px solid #d7d7d7;
+    }
+  }
+  .iconCounter {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    background: #ea3e1f;
+    font-size: 14px;
+    border-radius: 50%;
+    position: absolute;
+    top: -11px;
+    right: 11px;
+    @include media('<1120px') {
+      position: inherit;
+      left: 0;
+      top: 0;
+      margin: 0 8px 0 0;
+    }
+  }
+  .iconCheck {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #8dc20c;
+    position: absolute;
+    top: -11px;
+    right: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    @include media('<1120px') {
+      position: inherit;
+      left: 0;
+      top: 0;
+    }
+  }
+  .counterIcon {
+    height: 100%;
+    display: flex;
+    font-size: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    @include media('<1120px') {
+      flex-direction: row;
+    }
+    .icon {
+      @include media('<1120px') {
+        width: 50px;
+        text-align: left;
+      }
+    }
+    .iconTitle {
+      font-size: 12px;
+      color: #0e041f;
+      display: block;
+      margin: 5px 0 0 0;
+    }
+  }
+  .counterBox {
+    color: #fff;
+    background: #1e123e;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    @include media('<1120px') {
+      height: auto;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+      background: transparent;
+    }
+    .counterMinus,
+    .counterPlus {
+      cursor: pointer;
+      height: 48px;
+      line-height: 48px;
+      font-size: 30px;
+      flex: 0 0 50%;
+      text-align: center;
+      position: relative;
+      @include media('<1120px') {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background: #1e123e;
+        flex: 0 0 auto;
+      }
+    }
+    .counterPlus {
+      @include media('<1120px') {
+        margin: 0 0 0 10px;
+      }
+      &:before {
+        content: '';
+        border-left: 1px solid rgba(255,255,255,0.20);
+        position: absolute;
+        left: 0;
+        height: 100%;
+        @include media('<1120px') {
+          display: none;
+        }
+      }
+    }
+  }
+}

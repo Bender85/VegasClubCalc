@@ -1,0 +1,96 @@
+.calculator__itemArea {
+  position: relative;
+}
+.calculator__item {
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  margin: 0 0 46px 0;
+  padding: 20px 50px 40px 70px;
+  overflow: hidden;
+  box-shadow: 0 0 15px 1px rgba(0,0,0,0.26);
+  display: flex;
+  align-items: flex-end;
+  @include media('<1120px'){
+    padding: 0px 24px 30px 25px;
+  }
+  &.club {
+    height: 158px;
+    &:before {
+      font-family: 'icomoon';
+      content: $icon-club;
+      position: absolute;
+      bottom: -47px;
+      right: -45px;
+      color: #f2f2f2;
+      font-size: 159px;
+      @include media('<1120px'){
+        display: none;
+      }
+    }
+  }
+  &.tickets {
+    height: 295px;
+    &:before {
+      font-family: 'icomoon';
+      content: $icon-tickets;
+      position: absolute;
+      bottom: -11px;
+      right: -38px;
+      color: #f2f2f2;
+      font-size: 7em;
+      @include media('<1120px'){
+        display: none;
+      }
+    }
+  }
+  &.drinks {
+    height: 295px;
+    &:before {
+      font-family: 'icomoon';
+      content: $icon-drinks;
+      position: absolute;
+      bottom: -26px;
+      right: -1px;
+      color: #f2f2f2;
+      font-size: 8em;
+      @include media('<1120px'){
+        display: none;
+      }
+    }
+  }
+  &.extras {
+    height: 295px;
+    &:before {
+      font-family: 'icomoon';
+      content: $icon-star;
+      position: absolute;
+      bottom: -19px;
+      right: -32px;
+      color: #f2f2f2;
+      font-size: 9em;
+      @include media('<1120px'){
+        display: none;
+      }
+    }
+  }
+}
+.area {
+  position: relative;
+}
+.hold {
+  position: absolute;
+  top: -30px;
+  left: 43px;
+  display: flex;
+  align-items: baseline;
+  z-index: 10;
+  > span {
+    font-size: 20px;
+    color: #26232b;
+    display: block;
+    position: relative;
+    top: 5px;
+    left: 17px;
+  }
+}

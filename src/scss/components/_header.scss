@@ -1,0 +1,86 @@
+.header {
+  font-family: 'Oswald', 'icomoon';
+  color: #fff;
+  padding: 75px 0 0 0;
+  margin: 0 0 66px 0;
+  &__logo {
+    text-transform: uppercase;
+    text-align: center;
+    width: 436px;
+    height: 224px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: auto auto 4px auto;
+    @include media('<1120px') {
+      width: auto;
+      height: 166px;
+    }
+    &--item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 48px 0 0 0;
+    }
+    &--text {
+      display: block;
+      &--size24 {
+        font-size: 24px;
+        letter-spacing: 3px;
+      }
+      &--size44 {
+        font-size: 44px;
+        letter-spacing: 6px;
+        margin: 0 0 5px 0;
+      }
+      &--size16 {
+        font-size: 16px;
+        letter-spacing: 7px;
+      }
+    }
+  }
+  .icon-romb {
+    &:before {
+      font-size: 13em;
+      position: absolute;
+      left: 0;
+      right: 0;
+      @include media('<1120px') {
+        font-size: 9em;
+      }
+    }
+  }
+  .bigText {
+    text-align: center;
+    font-size: 22px;
+    .bigText__item {
+      display: block;
+      font-size: 62px;
+      //font-family: 'Oswald';
+      text-transform: uppercase;
+      letter-spacing: 6.9px;
+      @include media('<1120px') {
+        display: none;
+      }
+    }
+    p {
+      font-family: "Open Sans";
+      margin: 0 0 8px 0;
+    }
+  }
+  .bigText__itemBottom {
+    margin: 55px 0 0 0;
+  }
+  //&__logo {
+  //  color: #fff;
+  //  font-family: 'icomoon' !important;
+  //  position: relative;
+  //  &--item {
+  //    position: absolute;
+  //  }
+  //  .logoItem {
+  //    display: block;
+  //  }
+  //}
+}

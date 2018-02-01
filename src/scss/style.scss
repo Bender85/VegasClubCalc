@@ -1,0 +1,32 @@
+// Note: any .css or .scss files included in the 'styles' directory
+// will be correctly compiled during `gulp` and `gulp production`
+
+//* Vendors *//
+@import '../../node_modules/include-media/dist/include-media';
+@import "../../node_modules/font-awesome/scss/font-awesome";
+
+
+//* Abstracts modules *//
+@import 'abstracts/main';
+
+//* Base modules *//
+@import 'base/main';
+
+//* Layout modules *//
+@import 'layout/main';
+
+//* Pages modules *//
+@import 'pages/main';
+
+//* Components *//
+//@import 'components/starter-box';
+@import 'components/iconmoon';
+@import 'components/buttons';
+@import 'components/header';
+@import 'components/calculator';
+@import 'components/compare';
+@import 'components/badges';
+@import 'components/calc-item';
+@import 'components/receipt';
+@import 'components/form-counter';
+@import 'components/custom-select';

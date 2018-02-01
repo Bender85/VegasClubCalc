@@ -1,0 +1,27 @@
+.calculator {
+  margin: 0 0 42px 0;
+}
+.flex__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  @include media('<1120px') {
+    flex-direction: column;
+  }
+  &--item-left {
+    max-width: 675px;
+    flex: 0 0 100%;
+    @include media('<1120px') {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  &--item-right {
+    max-width: 414px;
+    flex: 0 0 100%;
+    @include media('<1120px') {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
