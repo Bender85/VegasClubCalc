@@ -12,10 +12,14 @@
   display: flex;
   align-items: flex-end;
   @include media('<1120px'){
-    padding: 0px 24px 30px 25px;
+    padding: 60px 24px 30px 25px;
+    //height: auto !important;
   }
   &.club {
     height: 158px;
+    //@include media('<1120px'){
+    //  height: auto;
+    //}
     &:before {
       font-family: 'icomoon';
       content: $icon-club;
@@ -31,6 +35,9 @@
   }
   &.tickets {
     height: 295px;
+    @include media('<1120px'){
+      height: auto;
+    }
     &:before {
       font-family: 'icomoon';
       content: $icon-tickets;
@@ -46,6 +53,9 @@
   }
   &.drinks {
     height: 295px;
+    @include media('<1120px'){
+      height: auto;
+    }
     &:before {
       font-family: 'icomoon';
       content: $icon-drinks;
@@ -61,6 +71,9 @@
   }
   &.extras {
     height: 295px;
+    @include media('<1120px'){
+      height: auto;
+    }
     &:before {
       font-family: 'icomoon';
       content: $icon-star;
@@ -73,6 +86,31 @@
         display: none;
       }
     }
+    .counterIcon {
+      @include media('<1120px'){
+        text-align: left;
+      }
+      .icon {
+        width: 95px;
+      }
+    }
+  }
+}
+.fz64 {
+  font-size: 64px !important;
+  @include media('<1120px'){
+    display: none;
+  }
+}
+.fz69 {
+  font-size: 69px !important;
+  @include media('<1120px'){
+    font-size: 60px !important;
+  }
+}
+.fz35 {
+  @include media('<1120px'){
+    font-size: 40px !important;
   }
 }
 .area {
@@ -92,5 +130,8 @@
     position: relative;
     top: 5px;
     left: 17px;
+  }
+  @include media('<1120px'){
+    left: 15px;
   }
 }

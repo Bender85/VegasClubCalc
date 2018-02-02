@@ -57,7 +57,7 @@
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    background: #8dc20c;
+    background: #d5d5d5;
     position: absolute;
     top: -11px;
     right: 11px;
@@ -72,6 +72,9 @@
       top: 0;
     }
   }
+  .iconCheckActive {
+    background: #8dc20c;
+  }
   .counterIcon {
     height: 100%;
     display: flex;
@@ -82,6 +85,7 @@
     text-align: center;
     @include media('<1120px') {
       flex-direction: row;
+      justify-content: flex-start;
     }
     .icon {
       @include media('<1120px') {

@@ -3,7 +3,8 @@
 // This file will be compiled into app.js and will not be minified.
 // Feel free with using ES6 here.
 
-import DE from './modules/helpers';
+// import DE from './modules/helpers';
+import main from './modules/main';
 import customSelect from './modules/customSelect';
 import calculator from './modules/calculator';
 
@@ -14,7 +15,8 @@ import calculator from './modules/calculator';
   $(() => {
     // DE.dotsEffect();
     customSelect.selectFunc();
-    // calculator.calc();
+    calculator.calc();
+    main.mainFunc();
   });
 
 })(jQuery);

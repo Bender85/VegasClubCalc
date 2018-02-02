@@ -7,6 +7,10 @@
   @include media('<1120px') {
     display: flex;
     flex-direction: column;
+    padding: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    //background: #999999;
   }
   &:after {
     content: '';
@@ -16,6 +20,9 @@
     height: 9px;
     background: url("../images/receipt_treeangle.png") repeat-x;
     background-position: center bottom;
+    @include media('<1120px') {
+      display: none;
+    }
   }
   &--header {
     background: #ee5a22;
@@ -32,6 +39,15 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding: 0 0 0 33px;
+    @include media('<1120px') {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      height: 55px;
+      line-height: 55px;
+      font-size: 20px;
+      font-weight: 700;
+      margin: 15px 0 0 0;
+    }
   }
   .icon-reseipt {
     margin: 0 12px 0 0;
@@ -49,6 +65,9 @@
   position: relative;
   overflow: hidden;
   flex-direction: column;
+  @include media('<1120px') {
+    height: 40px;
+  }
   &:before {
     position: absolute;
     top: -22px;
@@ -59,6 +78,9 @@
     background-position: 100% 100%;
     width: 194px;
     height: 194px;
+    @include media('<1120px') {
+      display: none;
+    }
   }
 }
 .big__total-area {
@@ -66,6 +88,9 @@
   font-weight: 900;
   color: #ee5a22;
   margin: 6px 0 -6px 0;
+  //@include media('<1120px') {
+  //  display: none;
+  //}
   sup {
     font-size: 52%;
     top: -.5em;
@@ -79,6 +104,9 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
+  @include media('<1120px') {
+    display: none;
+  }
   .logo {
     width: 166px;
     height: 166px;
@@ -86,6 +114,17 @@
     overflow: hidden;
     border-radius: 50%;
     margin: 0 0 18px 0;
+    position: relative;
+    img {
+      max-width: initial;
+      height: initial;
+      position: absolute;
+      top: -9999px;
+      bottom: -9999px;
+      left: -9999px;
+      right: -9999px;
+      margin: auto;
+    }
   }
   .about_club-title {
     color: #26232b;
@@ -107,9 +146,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include media('<1120px') {
+    flex-direction: row;
+  }
   .big__total-area {
     font-size: 34px;
     margin: -16px 0 27px 0;
+    @include media('<1120px') {
+      font-size: 28px;
+      margin: 0;
+    }
     sup {
       font-size: 52%;
       top: -0.7em;
@@ -118,6 +164,9 @@
   .subtotalTitle {
     align-self: flex-start;
     top: 0;
+    //@include media('<1120px') {
+    //  display: none;
+    //}
   }
 }
 .subtotalArea {
@@ -132,6 +181,10 @@
   align-self: flex-start;
   top: 30px;
   position: relative;
+  @include media('<1120px') {
+    top: 5px;
+    padding: 7px 10px 9px 30px;
+  }
 }
 .subtotalList {
   margin: 0 0 22px 0;
@@ -158,11 +211,19 @@
   width: 47px;
   display: inline-block;
   font-size: 20px;
+  @include media('<1120px') {
+    display: none;
+  }
+}
+.borderDotted {
+  width: 85%;
+  border-top: 2px dotted #ee5a22;
+  margin: 0 auto 48px auto;
+  @include media('<1120px') {
+    display: none;
+  }
 }
 .share {
-  width: 85%;
-  border-bottom: 2px dotted #ee5a22;
-  margin: 0 0 48px 0;
   padding: 21px 0 29px 64px;
   font-size: 14px;
   color: #9e9e9e;
@@ -173,5 +234,100 @@
     color: #ee5a22;
     font-size: 20px;
     margin: 0 24px 0 0;
+  }
+}
+
+.expandBox {
+  .ttotal {
+    @include media('<1120px') {
+      flex-direction: column;
+    }
+  }
+  .big__total-area {
+    //font-size: 56px;
+    //font-weight: 900;
+    //color: #ee5a22;
+    //margin: 6px 0 -6px 0;
+    @include media('<1120px') {
+      display: none;
+    }
+    //sup {
+    //  font-size: 52%;
+    //  top: -.5em;
+    //}
+  }
+  .subtotalTitle {
+    //align-self: flex-start;
+    //top: 0;
+    //@include media('<1120px') {
+    //  display: none;
+    //}
+  }
+
+}
+.openTrigger {
+  display: none;
+  @include media('<1120px') {
+    width: 35px;
+    height: 35px;
+    background: #f85b30;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: absolute;
+    left: 15px;
+    top: -17px;
+  }
+}
+.expandBox {
+  @include media('<1120px') {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.1s linear;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.expandBoxActive {
+  height: 535px;
+  overflow: initial;
+  visibility: visible;
+  opacity: 1;
+}
+.mobView {
+  display: none;
+  @include media('<1120px') {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    .subtotalTitle {
+      @include media('<1120px') {
+        top: 10px;
+        padding: 0 10px 9px 0;
+      }
+    }
+  }
+  .clubTitle {
+    font-size: 13px;
+  }
+}
+.startOver {
+  font-size: 13px;
+  font-weight: 700;
+  color: #f85b30;
+  text-decoration: none;
+  span {
+    vertical-align: middle;
+  }
+  &:before {
+    content: '';
+    background: url("../images/start_over.png") no-repeat;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 8px 0 0;
   }
 }

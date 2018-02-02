@@ -15,9 +15,9 @@
   //top: -50px;
   //left: -30px;
   transition: all .3s ease-in-out;
-  //@include media('<1120px') {
-  //  width: 72px;
-  //  height: 72px;
-  //  font-size: 30px;
-  //}
+  @include media('<1120px') {
+    width: 72px;
+    height: 72px;
+    font-size: 30px;
+  }
 }

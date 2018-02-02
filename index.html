@@ -148,40 +148,25 @@
             <div class="calculator__item extras">
               <div class="formCounterArea">
                 <div class="formCounter">
-                  <!--<div class="iconCounter">0</div>-->
-                  <div class="counterIcon">
+                  <div class="counterIcon fz35">
                     <i class="icon icon-table_service"></i>
                     <span class="iconTitle">Table service</span>
                   </div>
                   <div class="iconCheck"><i class="fa fa-check" aria-hidden="true"></i></div>
-                  <!--<div class="counterBox">-->
-                  <!--<div class="counterMinus">-</div>-->
-                  <!--<div class="counterPlus">+</div>-->
-                  <!--</div>-->
                 </div>
                 <div class="formCounter">
-                  <!--<div class="iconCounter">0</div>-->
-                  <div class="counterIcon" style="font-size: 64px;">
+                  <div class="counterIcon fz64">
                     <i class="icon icon-cloakroom"></i>
                     <span class="iconTitle">Cloakroom</span>
                   </div>
-                  <div class="iconCheck"><i class="fa fa-check" aria-hidden="true"></i></div>
-                  <!--<div class="counterBox">-->
-                  <!--<div class="counterMinus">-</div>-->
-                  <!--<div class="counterPlus">+</div>-->
-                  <!--</div>-->
+                  <div class="iconCheck iconCheckActive"><i class="fa fa-check" aria-hidden="true"></i></div>
                 </div>
                 <div class="formCounter">
-                  <!--<div class="iconCounter">0</div>-->
-                  <div class="counterIcon" style="font-size: 69px;">
+                  <div class="counterIcon fz69">
                     <i class="icon icon-parking"></i>
                     <span class="iconTitle">Parking<br>(for over 4hrs)</span>
                   </div>
-                  <div class="iconCheck"><i class="fa fa-check" aria-hidden="true"></i></div>
-                  <!--<div class="counterBox">-->
-                  <!--<div class="counterMinus">-</div>-->
-                  <!--<div class="counterPlus">+</div>-->
-                  <!--</div>-->
+                  <div class="iconCheck iconCheckActive"><i class="fa fa-check" aria-hidden="true"></i></div>
                 </div>
               </div>
             </div>
@@ -190,60 +175,82 @@
 
         <div class="flex__container--item-right">
           <div class="receipt__area">
-            <div class="receipt__area--header"><i class="icon-reseipt"></i>your Receipt</div>
-            <div class="stamp__custom">
-              <div class="big__total-area">
-                <sup>&dollar;</sup><span class="total">747</span>
+            <div class="openTrigger"><span>+</span></div>
+            <div class="mobView">
+              <div class="item">
+                <div class="ttotal">
+                  <span class="subtotalTitle">Total</span>
+                  <div class="big__total-area">
+                    <sup>&dollar;</sup><span class="total">747</span>
+                  </div>
+                </div>
               </div>
-              <span class="subtotalTitle">Subtotal</span>
-            </div>
-            <div class="subtotalArea">
-              <!--<span class="subtotalTitle">Subtotal</span>-->
-              <ul class="subtotalList">
-                <li class="subtotalListItem">
-                  <span><i class="SubtotalIconColor icon-tickets"></i>Male entrance</span>
-                  <span class="subtotalItemPrice">&dollar;0</span>
-                </li>
-                <li class="subtotalListItem">
-                 <span> <i class="SubtotalIconColor icon-tickets"></i>Female entrance</span>
-                  <span class="subtotalItemPrice">&dollar;0</span>
-                </li>
-                <li class="subtotalListItem">
-                 <span><i class="SubtotalIconColor icon-drinks"></i>Drinks</span>
-                  <span class="subtotalItemPrice">&dollar;0</span>
-                </li>
-                <li class="subtotalListItem">
-                  <span><i class="SubtotalIconColor icon-cloakroom"></i>Cloakroom</span>
-                  <span class="subtotalItemPrice">&dollar;0</span>
-                </li>
-                <li class="subtotalListItem">
-                  <span><i class="SubtotalIconColor icon-parking"></i>Parking</span>
-                  <span class="subtotalItemPrice">&dollar;0</span>
-                </li>
-              </ul>
-            </div>
-            <div class="ttotal">
-              <span class="subtotalTitle">Total</span>
-              <div class="big__total-area">
-                <sup>&dollar;</sup><span class="total">747</span>
+              <div class="item" style="text-align: right;">
+                <div class="clubTitle">Jewel - Aria Resort & Casino</div>
+                <a href="" class="startOver"><span>Start Over</span></a>
               </div>
             </div>
-            <div class="ttotal">
-              <button class="btn compareBtn"><i class="icon-bar"></i>Compare Club Prices</button>
-              <div class="share">
-                <span>Share your night out</span><i class="fa fa-twitter" aria-hidden="true"></i>
-                <i class="fa fa-facebook" aria-hidden="true"></i>
+            <div class="expandBox">
+              <div class="receipt__area--header"><i class="icon-reseipt"></i>your Receipt</div>
+              <div class="stamp__custom">
+                <div class="big__total-area">
+                  <sup>&dollar;</sup><span class="total">747</span>
+                </div>
+                <span class="subtotalTitle">Subtotal</span>
               </div>
-            </div>
-            <div class="about_club">
-              <div class="logo"></div>
-              <div class="about_club-title">Jewel - Aria Resort &amp; Casino</div>
-              <div class="address">
-                <p>3730 S Las Vegas Boulevard</p>
-                <p>Las Vegas, NV 89158</p>
-                <p>USA</p>
+              <div class="subtotalArea">
+                <!--<span class="subtotalTitle">Subtotal</span>-->
+                <ul class="subtotalList">
+                  <li class="subtotalListItem">
+                    <span><i class="SubtotalIconColor icon-tickets"></i>Male entrance</span>
+                    <span class="subtotalItemPrice">&dollar;0</span>
+                  </li>
+                  <li class="subtotalListItem">
+                    <span> <i class="SubtotalIconColor icon-tickets"></i>Female entrance</span>
+                    <span class="subtotalItemPrice">&dollar;0</span>
+                  </li>
+                  <li class="subtotalListItem">
+                    <span><i class="SubtotalIconColor icon-drinks"></i>Drinks</span>
+                    <span class="subtotalItemPrice">&dollar;0</span>
+                  </li>
+                  <li class="subtotalListItem">
+                    <span><i class="SubtotalIconColor icon-cloakroom"></i>Cloakroom</span>
+                    <span class="subtotalItemPrice">&dollar;0</span>
+                  </li>
+                  <li class="subtotalListItem">
+                    <span><i class="SubtotalIconColor icon-parking"></i>Parking</span>
+                    <span class="subtotalItemPrice">&dollar;0</span>
+                  </li>
+                </ul>
               </div>
-              <a href="" class="btn linkBorder btnLink smallBorderRadius">Go toclub's website</a>
+              <div class="ttotal">
+                <span class="subtotalTitle hideInMobile">Total</span>
+                <div class="big__total-area">
+                  <sup>&dollar;</sup><span class="total">747</span>
+                </div>
+              </div>
+              <div class="ttotal flexBoxCenter">
+                <button class="btn compareBtn"><i class="icon-bar"></i>Compare Club Prices</button>
+                <div class="share">
+                  <span>Share your night out</span><i class="fa fa-twitter" aria-hidden="true"></i>
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="borderDotted"></div>
+              <div class="about_club">
+                <div class="logo">
+                  <img src="./assets/images/club.jpg" alt="">
+                </div>
+                <div class="about_club-title">Jewel - Aria Resort &amp; Casino</div>
+                <div class="address">
+                  <p>3730 S Las Vegas Boulevard</p>
+                  <p>Las Vegas, NV 89158</p>
+                  <p>USA</p>
+                </div>
+              </div>
+              <div class="flexBoxCenter">
+                <a href="" class="btn linkBorder btnLink smallBorderRadius">Go toclub's website</a>
+              </div>
             </div>
           </div>
         </div>
@@ -269,7 +276,7 @@
           </div>
         </div>
         <div class="comparedList">
-          <div class="compareListItem compareListItemActive">
+          <div class="compareListItem compareListItemActive" title="&dollar;757">
             <div class="compareClubTitle">Drail's and Drail's After Hours - The Cromwell</div>
             <div class="compareTicketsArea">
               <div class="testLine">
@@ -285,7 +292,7 @@
               </div>
             </div>
           </div>
-          <div class="compareListItem">
+          <div class="compareListItem" title="&dollar;757">
             <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
             <div class="compareTicketsArea">
               <div class="testLine">
@@ -301,7 +308,7 @@
               </div>
             </div>
           </div>
-          <div class="compareListItem">
+          <div class="compareListItem" title="&dollar;757">
             <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
             <div class="compareTicketsArea">
               <div class="testLine">
@@ -317,7 +324,7 @@
               </div>
             </div>
           </div>
-          <div class="compareListItem">
+          <div class="compareListItem" title="&dollar;757">
             <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
             <div class="compareTicketsArea">
               <div class="testLine">
@@ -333,7 +340,7 @@
               </div>
             </div>
           </div>
-          <div class="compareListItem">
+          <div class="compareListItem" title="&dollar;757">
             <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
             <div class="compareTicketsArea">
               <div class="testLine">
@@ -349,7 +356,7 @@
               </div>
             </div>
           </div>
-          <div class="compareListItem">
+          <div class="compareListItem" title="&dollar;757">
             <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
             <div class="compareTicketsArea">
               <div class="testLine">
@@ -365,7 +372,7 @@
               </div>
             </div>
           </div>
-          <div class="compareListItem">
+          <div class="compareListItem" title="&dollar;757">
             <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
             <div class="compareTicketsArea">
               <div class="testLine">
@@ -381,7 +388,7 @@
               </div>
             </div>
           </div>
-          <div class="compareListItem">
+          <div class="compareListItem" title="&dollar;757">
             <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
             <div class="compareTicketsArea">
               <div class="testLine">
@@ -397,7 +404,7 @@
               </div>
             </div>
           </div>
-          <div class="compareListItem">
+          <div class="compareListItem" title="&dollar;757">
             <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
             <div class="compareTicketsArea">
               <div class="testLine">
@@ -413,7 +420,7 @@
               </div>
             </div>
           </div>
-          <div class="compareListItem">
+          <div class="compareListItem" title="&dollar;757">
             <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
             <div class="compareTicketsArea">
               <div class="testLine">
@@ -429,7 +436,7 @@
               </div>
             </div>
           </div>
-          <div class="compareListItem">
+          <div class="compareListItem" title="&dollar;757">
             <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
             <div class="compareTicketsArea">
               <div class="testLine">
@@ -445,7 +452,7 @@
               </div>
             </div>
           </div>
-          <div class="compareListItem">
+          <div class="compareListItem" title="&dollar;757">
             <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
             <div class="compareTicketsArea">
               <div class="testLine">
@@ -461,7 +468,7 @@
               </div>
             </div>
           </div>
-          <div class="compareListItem">
+          <div class="compareListItem" title="&dollar;757">
             <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
             <div class="compareTicketsArea">
               <div class="testLine">
@@ -477,7 +484,7 @@
               </div>
             </div>
           </div>
-          <div class="compareListItem">
+          <div class="compareListItem" title="&dollar;757">
             <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
             <div class="compareTicketsArea">
               <div class="testLine">
@@ -493,7 +500,7 @@
               </div>
             </div>
           </div>
-          <div class="compareListItem">
+          <div class="compareListItem" title="&dollar;757">
             <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
             <div class="compareTicketsArea">
               <div class="testLine">
@@ -509,7 +516,7 @@
               </div>
             </div>
           </div>
-          <div class="compareListItem">
+          <div class="compareListItem" title="&dollar;757">
             <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
             <div class="compareTicketsArea">
               <div class="testLine">
@@ -525,7 +532,7 @@
               </div>
             </div>
           </div>
-          <div class="compareListItem">
+          <div class="compareListItem" title="&dollar;757">
             <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
             <div class="compareTicketsArea">
               <div class="testLine">
@@ -541,7 +548,7 @@
               </div>
             </div>
           </div>
-          <div class="compareListItem">
+          <div class="compareListItem" title="&dollar;757">
             <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
             <div class="compareTicketsArea">
               <div class="testLine">
@@ -557,7 +564,7 @@
               </div>
             </div>
           </div>
-          <div class="compareListItem">
+          <div class="compareListItem" title="&dollar;757">
             <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
             <div class="compareTicketsArea">
               <div class="testLine">
@@ -573,7 +580,7 @@
               </div>
             </div>
           </div>
-          <div class="compareListItem">
+          <div class="compareListItem" title="&dollar;757">
             <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
             <div class="compareTicketsArea">
               <div class="testLine">

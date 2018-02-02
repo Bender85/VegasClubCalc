@@ -7,9 +7,24 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 25px;
+  @include media('<1120px') {
+    padding: 0 15px;
+  }
 }
 //@include media(">medium", "<=large") {
 //
 //  width: 100%;
 //
 //}
+.showInMobile {
+  display: none  !important;;
+  @include media('<1120px') {
+    display: block  !important;;
+  }
+}
+.hideInMobile {
+  display: block  !important;;
+  @include media('<1120px') {
+    display: none !important;
+  }
+}

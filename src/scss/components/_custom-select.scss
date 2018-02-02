@@ -9,6 +9,8 @@
   top: 74px;
   z-index: 11;
   left: 71px;
+  display: flex;
+  width: 100%;
   @include media('<1120px') {
     left: 15px;
   }
@@ -20,11 +22,12 @@
   position: relative;
   font-size: 24px;
   color: #26232b;
-  width: 460px;
+  max-width: 460px;
+  flex: 0 0 93%;
   height: 40px;
   top: 7px;
   @include media('<1120px') {
-    width: 295px;
+    max-width: 100%;
     font-size: 18px;
   }
 }
@@ -113,6 +116,7 @@
     color: #fff;
     width: 188px;
     height: 41px;
+    flex: 0 0 auto;
     top: 0;
     .bold {
       font-weight: 700;

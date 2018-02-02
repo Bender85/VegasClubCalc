@@ -61,10 +61,12 @@
     flex: 0 0 100%;
     display: flex;
     justify-content: flex-start;
+    flex-direction: row;
     @include media('<1120px') {
       max-width: 100%;
       width: 100%;
       justify-content: space-between;
+      flex-direction: row;
     }
   }
   //.compareCostLong {
