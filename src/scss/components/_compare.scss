@@ -162,6 +162,7 @@
       height: 100%;
       background: #ee5a22;
       border-radius: 20px;
+      transition: all 0.3s ease-out;
     }
     .testLine {
       height: 47px;
@@ -204,5 +205,8 @@
         }
       }
     }
+  }
+  .showit {
+    display: block !important;
   }
 }

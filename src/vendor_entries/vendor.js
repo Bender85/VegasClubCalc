@@ -7,4 +7,5 @@ module.exports = [
   './node_modules/tooltipster/dist/js/tooltipster.main.js',
   './node_modules/tooltipster/dist/js/tooltipster.bundle.js',
   './node_modules/fixto/dist/fixto.js',
+  './src/js/modules/clubs.js'
 ];

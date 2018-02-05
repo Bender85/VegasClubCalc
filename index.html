@@ -35,20 +35,27 @@
     <section class="calculator">
       <div class="flex__container">
         <div class="flex__container--item-left">
-          <div class="area">
+          <div class="area form-section" key="select a league">
             <div class="hold">
               <div class="badge__holder flexBoxCenter">
                 <i class="icon-club"></i>
               </div>
               <span>Club</span>
             </div>
-            <div class="select__club">
-              <select name="" id="">
-                <option value="0">Jewel - Aria Resort &amp; Casino</option>
-                <option value="1">Jewel - Aria Resort &amp; Casino 2</option>
-                <option value="2">Jewel - Aria Resort &amp; Casino 3</option>
-                <option value="3">Jewel - Aria Resort &amp; Casino 4</option>
+            <div class="select__club form-section-body">
+              <!--<select name="" id="" class="leagues__dropdown footy-dropdown footy-options" league="english">-->
+                <!--&lt;!&ndash;<option value="0">Jewel - Aria Resort &amp; Casino</option>&ndash;&gt;-->
+                <!--&lt;!&ndash;<option value="1">Jewel - Aria Resort &amp; Casino 2</option>&ndash;&gt;-->
+                <!--&lt;!&ndash;<option value="2">Jewel - Aria Resort &amp; Casino 3</option>&ndash;&gt;-->
+                <!--&lt;!&ndash;<option value="3">Jewel - Aria Resort &amp; Casino 4</option>&ndash;&gt;-->
+              <!--</select>-->
+              <select name="" id="" class="teams__dropdown footy-dropdown dinamic-dropdown">
+                <!--<option value="0">Jewel - Aria Resort &amp; Casino</option>-->
+                <!--<option value="1">Jewel - Aria Resort &amp; Casino 2</option>-->
+                <!--<option value="2">Jewel - Aria Resort &amp; Casino 3</option>-->
+                <!--<option value="3">Jewel - Aria Resort &amp; Casino 4</option>-->
               </select>
+              <!--<div class="leagues__dropdown footy-dropdown"></div>-->
             </div>
             <div class="calculator__item club"></div>
           </div>
@@ -60,10 +67,10 @@
               </div>
               <span>Tickets</span>
             </div>
-            <div class="calculator__item tickets">
+            <div class="calculator__item tickets" key="tickets">
               <div class="formCounterArea">
                 <div class="formCounter">
-                  <div class="counterIcon">
+                  <div class="counterIcon" id="inpt-male">
                     <i class="icon icon-male">
                       <span class="path1"></span>
                     </i>
@@ -76,7 +83,7 @@
                   </div>
                 </div>
                 <div class="formCounter">
-                  <div class="counterIcon">
+                  <div class="counterIcon" id="inpt-female">
                     <i class="icon icon-female">
                       <span class="path1"></span>
                     </i>
@@ -99,10 +106,10 @@
               </div>
               <span>Drinks</span>
             </div>
-            <div class="calculator__item drinks">
+            <div class="calculator__item drinks" key="drinks">
               <div class="formCounterArea">
                 <div class="formCounter">
-                  <div class="counterIcon">
+                  <div class="counterIcon" id="inpt-shot">
                     <i class="icon icon-shot"></i>
                     <div class="iconCounter">0</div>
                     <span class="iconTitle">Shot</span>
@@ -113,7 +120,7 @@
                   </div>
                 </div>
                 <div class="formCounter">
-                  <div class="counterIcon">
+                  <div class="counterIcon" id="inpt-champane">
                     <i class="icon icon-champane"></i>
                     <div class="iconCounter">0</div>
                     <span class="iconTitle">Champane</span>
@@ -124,7 +131,7 @@
                   </div>
                 </div>
                 <div class="formCounter">
-                  <div class="counterIcon">
+                  <div class="counterIcon" id="inpt-bear">
                     <i class="icon icon-bear"></i>
                     <div class="iconCounter">0</div>
                     <span class="iconTitle">Beer</span>
@@ -145,24 +152,24 @@
               </div>
               <span>Extras</span>
             </div>
-            <div class="calculator__item extras">
+            <div class="calculator__item extras" key="extras">
               <div class="formCounterArea">
                 <div class="formCounter">
-                  <div class="counterIcon fz35">
+                  <div class="counterIcon fz35" id="inpt-table-service">
                     <i class="icon icon-table_service"></i>
                     <span class="iconTitle">Table service</span>
                   </div>
                   <div class="iconCheck"><i class="fa fa-check" aria-hidden="true"></i></div>
                 </div>
                 <div class="formCounter">
-                  <div class="counterIcon fz64">
+                  <div class="counterIcon fz64" id="inpt-cloakroom">
                     <i class="icon icon-cloakroom"></i>
                     <span class="iconTitle">Cloakroom</span>
                   </div>
                   <div class="iconCheck iconCheckActive"><i class="fa fa-check" aria-hidden="true"></i></div>
                 </div>
                 <div class="formCounter">
-                  <div class="counterIcon fz69">
+                  <div class="counterIcon fz69" d="inpt-parking">
                     <i class="icon icon-parking"></i>
                     <span class="iconTitle">Parking<br>(for over 4hrs)</span>
                   </div>
@@ -173,7 +180,7 @@
           </div>
         </div>
 
-        <div class="flex__container--item-right">
+        <div class="flex__container--item-right footy-calculator__recepit">
           <div class="receipt__area">
             <div class="openTrigger"><span>+</span></div>
             <div class="mobView">

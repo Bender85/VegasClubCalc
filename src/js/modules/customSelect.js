@@ -45,6 +45,9 @@ var customSelect = {
       });
 
     });
+    $('.select-options li').on('click', function () {
+      alert('asda');
+    });
   }
 };
 

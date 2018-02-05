@@ -14,8 +14,8 @@ import calculator from './modules/calculator';
   // When DOM is ready
   $(() => {
     // DE.dotsEffect();
-    customSelect.selectFunc();
     calculator.calc();
+    // customSelect.selectFunc();
     main.mainFunc();
   });
 
