@@ -108,7 +108,8 @@ let calculator = {
 
       // Update checkbox (extras)
       updateCheckbox: function updateCheckbox($this) {
-        $this.find('.counter-checkbox').toggleClass('active');
+        // $this.find('.counter-checkbox').toggleClass('active');
+        $this.find('.iconCheck').toggleClass('iconCheckActive');
 
         $('.footy-calculator__recepit').trigger('updatePrices');
       },
@@ -142,12 +143,27 @@ let calculator = {
         });
 
         // Checkbox clicks
-        $('.form-checkbox').click(function () {
+        // $('.form-checkbox').click(function () {
+        //   if (calculator.checkIfTeamSelected()) {
+        //     calculator.updateCheckbox($(this));
+        //   }
+        // });
+
+        $('.extrasTrigger').click(function () {
+          // $(this).siblings('.iconCheck').toggleClass('iconCheckActive');
           if (calculator.checkIfTeamSelected()) {
+            $(this).siblings('.iconCheck').toggleClass('iconCheckActive');
+            calculator.updateQty($(this));
             calculator.updateCheckbox($(this));
           }
         });
 
+        // $('.extrasTrigger').on('click', function () {
+        //   if (calculator.checkIfTeamSelected()) {
+        //     calculator.updateQty($(this));
+        //   }
+        //   $(this).siblings('.iconCheck').toggleClass('iconCheckActive');
+        // });
         // Click on compare CTA
         $('.footy-compareCta').click(function () {
           if ($(this).hasClass('active')) {
@@ -166,7 +182,7 @@ let calculator = {
 
             // Please complete the form
             alert(window.settings.errors.form);
-            helpers.scrollToEl(500, $('.calculator__item').eq(1), 50);
+            helpers.scrollToEl(500, $('.calculator__item').eq(0), 50);
           }
         });
 
@@ -195,23 +211,43 @@ let calculator = {
 
             $(leagues[leagueName]).each(function (i, teamDetails) {
 
-              htmlLeagues += '<div class="compare-team" compare-league="' + leagueName + '" compare-team="' + i + '">';
-              htmlLeagues += '<div class="compare-team-left">';
-              htmlLeagues += '<img src="' + teamDetails.icon + '" alt="' + teamDetails.name + '" />';
-              htmlLeagues += '<div class="compare-team-name">' + teamDetails.name + '</div>';
-              htmlLeagues += '</div>';
-              htmlLeagues += '<div class="compare-team-right">';
-              htmlLeagues += '<div class="compare-price-tickets"></div>';
-              htmlLeagues += '<div class="compare-price-extras"></div>';
-              htmlLeagues += '<div class="compare-tooltip"></div>';
-              htmlLeagues += '</div>';
-              htmlLeagues += '<div class="clearfix"></div>';
-              htmlLeagues += '</div>';
+              // htmlLeagues += '<div class="compare-team" compare-league="' + leagueName + '" compare-team="' + i + '">';
+              // htmlLeagues += '<div class="compare-team-left">';
+              // htmlLeagues += '<img src="' + teamDetails.icon + '" alt="' + teamDetails.name + '" />';
+              // htmlLeagues += '<div class="compare-team-name">' + teamDetails.name + '</div>';
+              // htmlLeagues += '</div>';
+              // htmlLeagues += '<div class="compare-team-right">';
+              // htmlLeagues += '<div class="compare-price-tickets"></div>';
+              // htmlLeagues += '<div class="compare-price-extras"></div>';
+              // htmlLeagues += '<div class="compare-tooltip"></div>';
+              // htmlLeagues += '</div>';
+              // htmlLeagues += '<div class="clearfix"></div>';
+              // htmlLeagues += '</div>';
+
+              htmlLeagues += `
+                <div class="compareListItem" compare-league="${leagueName}" compare-team="${i}" title="&dollar;757">
+                  <div class="compareClubTitle">${teamDetails.name}</div>
+                  <div class="compareTicketsArea">
+                    <div class="testLine">
+                      <div class="testLineItem"></div>
+                      <div class="testLineItem"></div>
+                      <div class="testLineItem"></div>
+                      <div class="testLineItem"></div>
+                      <div class="testLineItem"></div>
+                      <div class="testLineItem"></div>
+                    </div>
+                    <div class="compareTicketsPriceArea">
+                      <div class="compareTicketsPriceFill compare-price-tickets"></div>
+                    </div>
+                  </div>
+                </div>
+              `;
+
             });
 
             // Add the line guides that slipts the compare table
-            htmlLeagues += '<div class="line-guide line-guide1"></div><div class="line-guide line-guide2"></div><div class="line-guide line-guide3"></div><div class="line-guide line-guide4"></div>';
-            htmlLeagues += '</div>';
+            // htmlLeagues += '<div class="line-guide line-guide1"></div><div class="line-guide line-guide2"></div><div class="line-guide line-guide3"></div><div class="line-guide line-guide4"></div>';
+            // htmlLeagues += '</div>';
           }
         }
         // Append html
@@ -237,7 +273,7 @@ let calculator = {
           var pricesArray = [];
 
           // Reset width of the chart bars
-          $('.compare-price-tickets, .compare-price-extras').css('width', '0%');
+          $('.compare-price-tickets').css('width', '0%');
 
           if (compareLeague) {
 
@@ -247,9 +283,10 @@ let calculator = {
             // league = $('.leagues__dropdown').attr('league') == '' ? false : $('.leagues__dropdown').attr('league');
 
             var formSelectedLeague = $('.calculator__item-body .leagues__dropdown').attr('league'),
-              formSelectedTeam = $('.calculator__item-body .teams__dropdown ').attr('team');
-              // placeholderCopy = $('.calculator__item-body .leagues__dropdown .dropdown-placeholder-name').text(),
+              formSelectedTeam = $('.calculator__item-body .teams__dropdown ').attr('team'),
+              placeholderCopy = $('#select option:selected').text();
               // badgeSoruce = $('.calculator__item-body .leagues__dropdown img').attr('src');
+            console.log(placeholderCopy);
 
             $('.compare-team').removeClass('active');
             if (league == formSelectedLeague) {
@@ -261,7 +298,7 @@ let calculator = {
 
             $('.compare-table-select .leagues__dropdown').attr('league', league);
 
-            $('.compare-table-select .dropdown-placeholder img').attr('src', badgeSoruce);
+            // $('.compare-table-select .dropdown-placeholder img').attr('src', badgeSoruce);
 
             $('.compare-table').hide();
             $('.compare-table.league-' + league).show();
@@ -337,7 +374,7 @@ let calculator = {
             });
 
             // Parking extras
-            if ($('.receipt-item-entry.parking').hasClass('showit')) {
+            if ($('.subtotalListItem.parking').hasClass('showit')) {
               extrasTotalPrice += checkIfNaN($(this)[0].prices.extras.parking);
             }
 
@@ -366,10 +403,10 @@ let calculator = {
             }));
             var maxPrice = max;
 
-            $('.line-guide-legend1').html(curency + '0');
-            $('.line-guide-legend2').html(curency + parseNumber(maxPrice / 3));
-            $('.line-guide-legend3').html(curency + parseNumber(maxPrice / 2));
-            $('.line-guide-legend4').html(curency + parseNumber(maxPrice));
+            // $('.line-guide-legend1').html(curency + '0');
+            // $('.line-guide-legend2').html(curency + parseNumber(maxPrice / 3));
+            // $('.line-guide-legend3').html(curency + parseNumber(maxPrice / 2));
+            // $('.line-guide-legend4').html(curency + parseNumber(maxPrice));
 
             // Animate the chart
             $(pricesArray).each(function (teamId, prices) {
@@ -381,7 +418,7 @@ let calculator = {
 
                 $('.compare-team[compare-team="' + teamId + '"][compare-league="' + league + '"]').show().find('.compare-price-tickets').width(parseFloat(ticketsPercentage).toFixed(2) + '%');
 
-                $('.compare-team[compare-team="' + teamId + '"][compare-league="' + league + '"]').show().find('.compare-price-extras').width(parseFloat(extrasPercentage).toFixed(2) + '%');
+                // $('.compare-team[compare-team="' + teamId + '"][compare-league="' + league + '"]').show().find('.compare-price-extras').width(parseFloat(extrasPercentage).toFixed(2) + '%');
 
                 $('.compare-team[compare-team="' + teamId + '"][compare-league="' + league + '"]').find('.compare-tooltip').html('Tickets: <b>' + curency + parseFloat(prices.ticketsTotalPrice).toFixed(2) + '</b>&nbsp; Extras: <b>' + curency + parseFloat(prices.extrasTotalPrice).toFixed(2) + '</b>');
               }
@@ -422,9 +459,9 @@ let calculator = {
         // html += '</span>';
         //
         // html += '</div>';
-        html += `<option class="dropdown-placeholder footy-placeholder">${leaguesDefault.english.name}</option>`;
-        html += `<option class="dropdown-placeholder footy-placeholder">${leaguesDefault.irish.name}</option>`;
-        html += `<option class="dropdown-placeholder footy-placeholder">${leaguesDefault.scottish.name}</option>`;
+        // html += `<option class="dropdown-placeholder footy-placeholder">${leaguesDefault.english.name}</option>`;
+        // html += `<option class="dropdown-placeholder footy-placeholder">${leaguesDefault.irish.name}</option>`;
+        // html += `<option class="dropdown-placeholder footy-placeholder">${leaguesDefault.scottish.name}</option>`;
 
         // Add the html .leagues__dropdown
         $('.leagues__dropdown').html(html);
@@ -834,9 +871,9 @@ let calculator = {
             // league = $('.leagues__dropdown').attr('league') == '' ? false : $('.leagues__dropdown').attr('league'),
             team = $('select').attr('team') == 'none' ? false : $('select').attr('team'),
             // selectedTeam = leagues[league][team],
-            selectedTeam = leagues[team],
-            selectedLeague = $('.leagues__dropdown .dropdown-placeholder-name').first().text(),
-            selectedLeagueBadge = $('.leagues__dropdown .footy-placeholder img').first().attr('src'),
+            selectedTeam = leagues.english[team],
+            // selectedLeague = $('.leagues__dropdown .dropdown-placeholder-name').first().text(),
+            // selectedLeagueBadge = $('.leagues__dropdown .footy-placeholder img').first().attr('src'),
             // curency = league == 'irish' ? '&euro;' : '&dollar;';
             curency = '&dollar;';
 
@@ -863,12 +900,26 @@ let calculator = {
 
             // Loop trought all the inputs
             // and set availability for each input
+            if ($('.teams__dropdown').attr('team') != 'none') {
+
+              $('.receipt-item-team').show();
+              $('.about_club-title').html(selectedTeam.name);
+              $('.logo').html('<img src="' + selectedTeam.icon + '" /> ');
+            } else {
+
+              $('.receipt-item-team').hide();
+              $('.receipt-item').hide();
+
+              // Reset curency and price if no team is selected
+              $('.cost-total').html(curency + '0.00');
+            }
             $('.counterIcon').each(function () {
 
               var mainKey = $(this).closest('.calculator__item').attr('key'),
-                settingKey = $(this).attr('id').replace('inpt-', ''),
+                // settingKey = $(this).attr('id').replace('inpt-', ''),
+                settingKey = $(this).attr('id'),
                 // price = leagues[team].prices[mainKey][settingKey];
-                price = leagues[team].prices[mainKey][settingKey];
+                price = leagues.english[team].prices[mainKey][settingKey];
               console.log(price);
 
               if (isNaN(price)) {
@@ -876,10 +927,15 @@ let calculator = {
               } else {
                 $('#inpt-' + settingKey).removeClass('notavailable');
               }
+              // if (isNaN(price)) {
+              //   $(settingKey).addClass('notavailable');
+              // } else {
+              //   $(settingKey).removeClass('notavailable');
+              // }
             });
           }
 
-          if (team && league) {
+          if (team) {
 
             // Show the selected options in the receipt
             $('.counterIcon').each(function () {
@@ -887,11 +943,12 @@ let calculator = {
               var qty = parseInt($(this).find('.iconCounter').text()),
                 id = $(this).attr('id'),
                 mainKey = $(this).closest('.calculator__item').attr('key'),
-                settingKey = $(this).attr('id').replace('inpt-', '');
+                // settingKey = $(this).attr('id').replace('inpt-', '');
+                settingKey = $(this).attr('id');
 
-              // for extras dropdowns
+              //for extras dropdowns
               if (mainKey == 'extras') {
-                if ($(this).find('.counter-checkbox').hasClass('active')) {
+                if ($(this).siblings('.iconCheck').hasClass('iconCheckActive')) {
                   qty = 1;
                 } else {
                   qty = 0;
@@ -903,11 +960,11 @@ let calculator = {
                 var price = selectedTeam.prices[mainKey][settingKey] * qty;
 
                 if (price >= 0) {
-
                   $('.' + id).addClass('showit');
 
                   // $('.' + id).find('.receipt-item-price').html(curency + parseFloat(price).toFixed(2));
                   $('.' + id).find('.subtotalItemPrice').html(curency + parseFloat(price).toFixed(2));
+                  console.log($('.' + id).find('.subtotalItemPrice').html(curency + parseFloat(price).toFixed(2)));
 
                   total += price;
                 } else {
@@ -925,7 +982,7 @@ let calculator = {
             $('.subtotalList').each(function () {
 
               // Except the team on the receipt
-              if (!$(this).hasClass('receipt-item-team')) {
+              if (!$(this).hasClass('subtotalListItem')) {
 
                 var count = 0;
 
@@ -961,19 +1018,19 @@ let calculator = {
         });
 
         // Click on receipt CTA
-        $('.footy-receiptCta').click(function () {
-
-          if ($(this).hasClass('active')) {
-
-            $('.footy-calculator__recepit, .footy-calculator__form').addClass('toggle-receipt');
-
-            helpers.scrollToEl(500, $('.footy-calculator__recepit'));
-          } else {
-
-            alert(window.settings.errors.team);
-            helpers.scrollToEl(500, $('.calculator__item').eq(1));
-          }
-        });
+        // $('.footy-receiptCta').click(function () {
+        //
+        //   if ($(this).hasClass('active')) {
+        //
+        //     $('.footy-calculator__recepit, .footy-calculator__form').addClass('toggle-receipt');
+        //
+        //     helpers.scrollToEl(500, $('.footy-calculator__recepit'));
+        //   } else {
+        //
+        //     alert(window.settings.errors.team);
+        //     helpers.scrollToEl(500, $('.calculator__item').eq(0), 50);
+        //   }
+        // });
       }
 
       /*

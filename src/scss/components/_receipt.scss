@@ -193,7 +193,7 @@
   .subtotalListItem {
     height: 53px;
     padding: 0 30px;
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
     &:nth-child(odd) {
@@ -204,6 +204,9 @@
       font-size: 18px;
       padding: 3px 0 0 0;
     }
+  }
+  .showit {
+    display: flex !important;
   }
 }
 .SubtotalIconColor {

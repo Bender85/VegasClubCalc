@@ -49,7 +49,7 @@
                 <!--&lt;!&ndash;<option value="2">Jewel - Aria Resort &amp; Casino 3</option>&ndash;&gt;-->
                 <!--&lt;!&ndash;<option value="3">Jewel - Aria Resort &amp; Casino 4</option>&ndash;&gt;-->
               <!--</select>-->
-              <select name="" id="" class="teams__dropdown footy-dropdown dinamic-dropdown">
+              <select name="" id="select" class="teams__dropdown footy-dropdown dinamic-dropdown">
                 <!--<option value="0">Jewel - Aria Resort &amp; Casino</option>-->
                 <!--<option value="1">Jewel - Aria Resort &amp; Casino 2</option>-->
                 <!--<option value="2">Jewel - Aria Resort &amp; Casino 3</option>-->
@@ -70,7 +70,7 @@
             <div class="calculator__item tickets" key="tickets">
               <div class="formCounterArea">
                 <div class="formCounter">
-                  <div class="counterIcon" id="inpt-male">
+                  <div class="counterIcon" id="male">
                     <i class="icon icon-male">
                       <span class="path1"></span>
                     </i>
@@ -83,7 +83,7 @@
                   </div>
                 </div>
                 <div class="formCounter">
-                  <div class="counterIcon" id="inpt-female">
+                  <div class="counterIcon" id="female">
                     <i class="icon icon-female">
                       <span class="path1"></span>
                     </i>
@@ -109,7 +109,7 @@
             <div class="calculator__item drinks" key="drinks">
               <div class="formCounterArea">
                 <div class="formCounter">
-                  <div class="counterIcon" id="inpt-shot">
+                  <div class="counterIcon" id="shot">
                     <i class="icon icon-shot"></i>
                     <div class="iconCounter">0</div>
                     <span class="iconTitle">Shot</span>
@@ -120,7 +120,7 @@
                   </div>
                 </div>
                 <div class="formCounter">
-                  <div class="counterIcon" id="inpt-champane">
+                  <div class="counterIcon" id="champane">
                     <i class="icon icon-champane"></i>
                     <div class="iconCounter">0</div>
                     <span class="iconTitle">Champane</span>
@@ -131,7 +131,7 @@
                   </div>
                 </div>
                 <div class="formCounter">
-                  <div class="counterIcon" id="inpt-bear">
+                  <div class="counterIcon" id="beer">
                     <i class="icon icon-bear"></i>
                     <div class="iconCounter">0</div>
                     <span class="iconTitle">Beer</span>
@@ -155,25 +155,25 @@
             <div class="calculator__item extras" key="extras">
               <div class="formCounterArea">
                 <div class="formCounter">
-                  <div class="counterIcon fz35" id="inpt-table-service">
+                  <div class="counterIcon extrasTrigger fz35" id="tableService">
                     <i class="icon icon-table_service"></i>
                     <span class="iconTitle">Table service</span>
                   </div>
                   <div class="iconCheck"><i class="fa fa-check" aria-hidden="true"></i></div>
                 </div>
                 <div class="formCounter">
-                  <div class="counterIcon fz64" id="inpt-cloakroom">
+                  <div class="counterIcon fz64 extrasTrigger" id="cloakroom">
                     <i class="icon icon-cloakroom"></i>
                     <span class="iconTitle">Cloakroom</span>
                   </div>
-                  <div class="iconCheck iconCheckActive"><i class="fa fa-check" aria-hidden="true"></i></div>
+                  <div class="iconCheck"><i class="fa fa-check" aria-hidden="true"></i></div>
                 </div>
                 <div class="formCounter">
-                  <div class="counterIcon fz69" d="inpt-parking">
+                  <div class="counterIcon fz69 extrasTrigger" id="parking">
                     <i class="icon icon-parking"></i>
                     <span class="iconTitle">Parking<br>(for over 4hrs)</span>
                   </div>
-                  <div class="iconCheck iconCheckActive"><i class="fa fa-check" aria-hidden="true"></i></div>
+                  <div class="iconCheck"><i class="fa fa-check" aria-hidden="true"></i></div>
                 </div>
               </div>
             </div>
@@ -188,7 +188,7 @@
                 <div class="ttotal">
                   <span class="subtotalTitle">Total</span>
                   <div class="big__total-area">
-                    <sup>&dollar;</sup><span class="total">747</span>
+                    <sup>&dollar;</sup><span class="total">0.00</span>
                   </div>
                 </div>
               </div>
@@ -201,43 +201,47 @@
               <div class="receipt__area--header"><i class="icon-reseipt"></i>your Receipt</div>
               <div class="stamp__custom">
                 <div class="big__total-area">
-                  <sup>&dollar;</sup><span class="total">747</span>
+                  <sup>&dollar;</sup><span class="total">0.00</span>
                 </div>
                 <span class="subtotalTitle">Subtotal</span>
               </div>
               <div class="subtotalArea">
                 <!--<span class="subtotalTitle">Subtotal</span>-->
                 <ul class="subtotalList">
-                  <li class="subtotalListItem">
+                  <li class="subtotalListItem male">
                     <span><i class="SubtotalIconColor icon-tickets"></i>Male entrance</span>
-                    <span class="subtotalItemPrice">&dollar;0</span>
+                    <span class="subtotalItemPrice">&dollar;0.00</span>
                   </li>
-                  <li class="subtotalListItem">
+                  <li class="subtotalListItem female">
                     <span> <i class="SubtotalIconColor icon-tickets"></i>Female entrance</span>
-                    <span class="subtotalItemPrice">&dollar;0</span>
+                    <span class="subtotalItemPrice">&dollar;0.00</span>
                   </li>
-                  <li class="subtotalListItem">
+                  <li class="subtotalListItem drinks">
                     <span><i class="SubtotalIconColor icon-drinks"></i>Drinks</span>
-                    <span class="subtotalItemPrice">&dollar;0</span>
+                    <span class="subtotalItemPrice">&dollar;0.00</span>
                   </li>
-                  <li class="subtotalListItem">
+                  <li class="subtotalListItem tableService">
+                    <span><i class="SubtotalIconColor icon-table_service"></i>Table service</span>
+                    <span class="subtotalItemPrice">&dollar;0.00</span>
+                  </li>
+                  <li class="subtotalListItem cloakroom">
                     <span><i class="SubtotalIconColor icon-cloakroom"></i>Cloakroom</span>
-                    <span class="subtotalItemPrice">&dollar;0</span>
+                    <span class="subtotalItemPrice">&dollar;0.00</span>
                   </li>
-                  <li class="subtotalListItem">
+                  <li class="subtotalListItem parking">
                     <span><i class="SubtotalIconColor icon-parking"></i>Parking</span>
-                    <span class="subtotalItemPrice">&dollar;0</span>
+                    <span class="subtotalItemPrice">&dollar;0.00</span>
                   </li>
                 </ul>
               </div>
               <div class="ttotal">
                 <span class="subtotalTitle hideInMobile">Total</span>
                 <div class="big__total-area">
-                  <sup>&dollar;</sup><span class="total">747</span>
+                  <sup>&dollar;</sup><span class="total">0.00</span>
                 </div>
               </div>
               <div class="ttotal flexBoxCenter">
-                <button class="btn compareBtn"><i class="icon-bar"></i>Compare Club Prices</button>
+                <button class="btn compareBtn footy-compareCta"><i class="icon-bar"></i>Compare Club Prices</button>
                 <div class="share">
                   <span>Share your night out</span><i class="fa fa-twitter" aria-hidden="true"></i>
                   <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -263,7 +267,7 @@
         </div>
       </div>
     </section>
-    <section class="compare">
+    <section class="compare footy-compare">
       <div class="compareTitle">Compare Club prices</div>
       <p class="compareText">See how much a night out at your chosen club will cost, compared to how</p>
       <p class="compareText">much you'll pay at Vegas' other big clubs</p>
@@ -282,327 +286,327 @@
             <div class="compareCostItem"><span><sup>&dollar;</sup>1000</span></div>
           </div>
         </div>
-        <div class="comparedList">
-          <div class="compareListItem compareListItemActive" title="&dollar;757">
-            <div class="compareClubTitle">Drail's and Drail's After Hours - The Cromwell</div>
-            <div class="compareTicketsArea">
-              <div class="testLine">
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-              </div>
-              <div class="compareTicketsPriceArea">
-                <div class="compareTicketsPriceFill"></div>
-              </div>
-            </div>
-          </div>
-          <div class="compareListItem" title="&dollar;757">
-            <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
-            <div class="compareTicketsArea">
-              <div class="testLine">
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-              </div>
-              <div class="compareTicketsPriceArea">
-                <div class="compareTicketsPriceFill" style="width: 80%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="compareListItem" title="&dollar;757">
-            <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
-            <div class="compareTicketsArea">
-              <div class="testLine">
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-              </div>
-              <div class="compareTicketsPriceArea">
-                <div class="compareTicketsPriceFill" style="width: 26%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="compareListItem" title="&dollar;757">
-            <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
-            <div class="compareTicketsArea">
-              <div class="testLine">
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-              </div>
-              <div class="compareTicketsPriceArea">
-                <div class="compareTicketsPriceFill" style="width: 26%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="compareListItem" title="&dollar;757">
-            <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
-            <div class="compareTicketsArea">
-              <div class="testLine">
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-              </div>
-              <div class="compareTicketsPriceArea">
-                <div class="compareTicketsPriceFill" style="width: 26%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="compareListItem" title="&dollar;757">
-            <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
-            <div class="compareTicketsArea">
-              <div class="testLine">
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-              </div>
-              <div class="compareTicketsPriceArea">
-                <div class="compareTicketsPriceFill" style="width: 26%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="compareListItem" title="&dollar;757">
-            <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
-            <div class="compareTicketsArea">
-              <div class="testLine">
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-              </div>
-              <div class="compareTicketsPriceArea">
-                <div class="compareTicketsPriceFill" style="width: 26%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="compareListItem" title="&dollar;757">
-            <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
-            <div class="compareTicketsArea">
-              <div class="testLine">
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-              </div>
-              <div class="compareTicketsPriceArea">
-                <div class="compareTicketsPriceFill" style="width: 26%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="compareListItem" title="&dollar;757">
-            <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
-            <div class="compareTicketsArea">
-              <div class="testLine">
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-              </div>
-              <div class="compareTicketsPriceArea">
-                <div class="compareTicketsPriceFill" style="width: 26%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="compareListItem" title="&dollar;757">
-            <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
-            <div class="compareTicketsArea">
-              <div class="testLine">
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-              </div>
-              <div class="compareTicketsPriceArea">
-                <div class="compareTicketsPriceFill" style="width: 26%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="compareListItem" title="&dollar;757">
-            <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
-            <div class="compareTicketsArea">
-              <div class="testLine">
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-              </div>
-              <div class="compareTicketsPriceArea">
-                <div class="compareTicketsPriceFill" style="width: 26%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="compareListItem" title="&dollar;757">
-            <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
-            <div class="compareTicketsArea">
-              <div class="testLine">
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-              </div>
-              <div class="compareTicketsPriceArea">
-                <div class="compareTicketsPriceFill" style="width: 26%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="compareListItem" title="&dollar;757">
-            <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
-            <div class="compareTicketsArea">
-              <div class="testLine">
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-              </div>
-              <div class="compareTicketsPriceArea">
-                <div class="compareTicketsPriceFill" style="width: 26%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="compareListItem" title="&dollar;757">
-            <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
-            <div class="compareTicketsArea">
-              <div class="testLine">
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-              </div>
-              <div class="compareTicketsPriceArea">
-                <div class="compareTicketsPriceFill" style="width: 26%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="compareListItem" title="&dollar;757">
-            <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
-            <div class="compareTicketsArea">
-              <div class="testLine">
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-              </div>
-              <div class="compareTicketsPriceArea">
-                <div class="compareTicketsPriceFill" style="width: 26%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="compareListItem" title="&dollar;757">
-            <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
-            <div class="compareTicketsArea">
-              <div class="testLine">
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-              </div>
-              <div class="compareTicketsPriceArea">
-                <div class="compareTicketsPriceFill" style="width: 26%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="compareListItem" title="&dollar;757">
-            <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
-            <div class="compareTicketsArea">
-              <div class="testLine">
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-              </div>
-              <div class="compareTicketsPriceArea">
-                <div class="compareTicketsPriceFill" style="width: 26%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="compareListItem" title="&dollar;757">
-            <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
-            <div class="compareTicketsArea">
-              <div class="testLine">
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-              </div>
-              <div class="compareTicketsPriceArea">
-                <div class="compareTicketsPriceFill" style="width: 26%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="compareListItem" title="&dollar;757">
-            <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
-            <div class="compareTicketsArea">
-              <div class="testLine">
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-              </div>
-              <div class="compareTicketsPriceArea">
-                <div class="compareTicketsPriceFill" style="width: 26%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="compareListItem" title="&dollar;757">
-            <div class="compareClubTitle">Jewel - Aria Resort & Casino</div>
-            <div class="compareTicketsArea">
-              <div class="testLine">
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-                <div class="testLineItem"></div>
-              </div>
-              <div class="compareTicketsPriceArea">
-                <div class="compareTicketsPriceFill" style="width: 26%"></div>
-              </div>
-            </div>
-          </div>
+        <div class="comparedList generate-compare-teams">
+          <!--<div class="compareListItem compareListItemActive" title="&dollar;757">-->
+            <!--<div class="compareClubTitle">Drail's and Drail's After Hours - The Cromwell</div>-->
+            <!--<div class="compareTicketsArea">-->
+              <!--<div class="testLine">-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+              <!--</div>-->
+              <!--<div class="compareTicketsPriceArea">-->
+                <!--<div class="compareTicketsPriceFill"></div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="compareListItem" title="&dollar;757">-->
+            <!--<div class="compareClubTitle">Jewel - Aria Resort & Casino</div>-->
+            <!--<div class="compareTicketsArea">-->
+              <!--<div class="testLine">-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+              <!--</div>-->
+              <!--<div class="compareTicketsPriceArea">-->
+                <!--<div class="compareTicketsPriceFill" style="width: 80%"></div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="compareListItem" title="&dollar;757">-->
+            <!--<div class="compareClubTitle">Jewel - Aria Resort & Casino</div>-->
+            <!--<div class="compareTicketsArea">-->
+              <!--<div class="testLine">-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+              <!--</div>-->
+              <!--<div class="compareTicketsPriceArea">-->
+                <!--<div class="compareTicketsPriceFill" style="width: 26%"></div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="compareListItem" title="&dollar;757">-->
+            <!--<div class="compareClubTitle">Jewel - Aria Resort & Casino</div>-->
+            <!--<div class="compareTicketsArea">-->
+              <!--<div class="testLine">-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+              <!--</div>-->
+              <!--<div class="compareTicketsPriceArea">-->
+                <!--<div class="compareTicketsPriceFill" style="width: 26%"></div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="compareListItem" title="&dollar;757">-->
+            <!--<div class="compareClubTitle">Jewel - Aria Resort & Casino</div>-->
+            <!--<div class="compareTicketsArea">-->
+              <!--<div class="testLine">-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+              <!--</div>-->
+              <!--<div class="compareTicketsPriceArea">-->
+                <!--<div class="compareTicketsPriceFill" style="width: 26%"></div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="compareListItem" title="&dollar;757">-->
+            <!--<div class="compareClubTitle">Jewel - Aria Resort & Casino</div>-->
+            <!--<div class="compareTicketsArea">-->
+              <!--<div class="testLine">-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+              <!--</div>-->
+              <!--<div class="compareTicketsPriceArea">-->
+                <!--<div class="compareTicketsPriceFill" style="width: 26%"></div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="compareListItem" title="&dollar;757">-->
+            <!--<div class="compareClubTitle">Jewel - Aria Resort & Casino</div>-->
+            <!--<div class="compareTicketsArea">-->
+              <!--<div class="testLine">-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+              <!--</div>-->
+              <!--<div class="compareTicketsPriceArea">-->
+                <!--<div class="compareTicketsPriceFill" style="width: 26%"></div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="compareListItem" title="&dollar;757">-->
+            <!--<div class="compareClubTitle">Jewel - Aria Resort & Casino</div>-->
+            <!--<div class="compareTicketsArea">-->
+              <!--<div class="testLine">-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+              <!--</div>-->
+              <!--<div class="compareTicketsPriceArea">-->
+                <!--<div class="compareTicketsPriceFill" style="width: 26%"></div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="compareListItem" title="&dollar;757">-->
+            <!--<div class="compareClubTitle">Jewel - Aria Resort & Casino</div>-->
+            <!--<div class="compareTicketsArea">-->
+              <!--<div class="testLine">-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+              <!--</div>-->
+              <!--<div class="compareTicketsPriceArea">-->
+                <!--<div class="compareTicketsPriceFill" style="width: 26%"></div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="compareListItem" title="&dollar;757">-->
+            <!--<div class="compareClubTitle">Jewel - Aria Resort & Casino</div>-->
+            <!--<div class="compareTicketsArea">-->
+              <!--<div class="testLine">-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+              <!--</div>-->
+              <!--<div class="compareTicketsPriceArea">-->
+                <!--<div class="compareTicketsPriceFill" style="width: 26%"></div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="compareListItem" title="&dollar;757">-->
+            <!--<div class="compareClubTitle">Jewel - Aria Resort & Casino</div>-->
+            <!--<div class="compareTicketsArea">-->
+              <!--<div class="testLine">-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+              <!--</div>-->
+              <!--<div class="compareTicketsPriceArea">-->
+                <!--<div class="compareTicketsPriceFill" style="width: 26%"></div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="compareListItem" title="&dollar;757">-->
+            <!--<div class="compareClubTitle">Jewel - Aria Resort & Casino</div>-->
+            <!--<div class="compareTicketsArea">-->
+              <!--<div class="testLine">-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+              <!--</div>-->
+              <!--<div class="compareTicketsPriceArea">-->
+                <!--<div class="compareTicketsPriceFill" style="width: 26%"></div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="compareListItem" title="&dollar;757">-->
+            <!--<div class="compareClubTitle">Jewel - Aria Resort & Casino</div>-->
+            <!--<div class="compareTicketsArea">-->
+              <!--<div class="testLine">-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+              <!--</div>-->
+              <!--<div class="compareTicketsPriceArea">-->
+                <!--<div class="compareTicketsPriceFill" style="width: 26%"></div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="compareListItem" title="&dollar;757">-->
+            <!--<div class="compareClubTitle">Jewel - Aria Resort & Casino</div>-->
+            <!--<div class="compareTicketsArea">-->
+              <!--<div class="testLine">-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+              <!--</div>-->
+              <!--<div class="compareTicketsPriceArea">-->
+                <!--<div class="compareTicketsPriceFill" style="width: 26%"></div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="compareListItem" title="&dollar;757">-->
+            <!--<div class="compareClubTitle">Jewel - Aria Resort & Casino</div>-->
+            <!--<div class="compareTicketsArea">-->
+              <!--<div class="testLine">-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+              <!--</div>-->
+              <!--<div class="compareTicketsPriceArea">-->
+                <!--<div class="compareTicketsPriceFill" style="width: 26%"></div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="compareListItem" title="&dollar;757">-->
+            <!--<div class="compareClubTitle">Jewel - Aria Resort & Casino</div>-->
+            <!--<div class="compareTicketsArea">-->
+              <!--<div class="testLine">-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+              <!--</div>-->
+              <!--<div class="compareTicketsPriceArea">-->
+                <!--<div class="compareTicketsPriceFill" style="width: 26%"></div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="compareListItem" title="&dollar;757">-->
+            <!--<div class="compareClubTitle">Jewel - Aria Resort & Casino</div>-->
+            <!--<div class="compareTicketsArea">-->
+              <!--<div class="testLine">-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+              <!--</div>-->
+              <!--<div class="compareTicketsPriceArea">-->
+                <!--<div class="compareTicketsPriceFill" style="width: 26%"></div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="compareListItem" title="&dollar;757">-->
+            <!--<div class="compareClubTitle">Jewel - Aria Resort & Casino</div>-->
+            <!--<div class="compareTicketsArea">-->
+              <!--<div class="testLine">-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+              <!--</div>-->
+              <!--<div class="compareTicketsPriceArea">-->
+                <!--<div class="compareTicketsPriceFill" style="width: 26%"></div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="compareListItem" title="&dollar;757">-->
+            <!--<div class="compareClubTitle">Jewel - Aria Resort & Casino</div>-->
+            <!--<div class="compareTicketsArea">-->
+              <!--<div class="testLine">-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+              <!--</div>-->
+              <!--<div class="compareTicketsPriceArea">-->
+                <!--<div class="compareTicketsPriceFill" style="width: 26%"></div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="compareListItem" title="&dollar;757">-->
+            <!--<div class="compareClubTitle">Jewel - Aria Resort & Casino</div>-->
+            <!--<div class="compareTicketsArea">-->
+              <!--<div class="testLine">-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+                <!--<div class="testLineItem"></div>-->
+              <!--</div>-->
+              <!--<div class="compareTicketsPriceArea">-->
+                <!--<div class="compareTicketsPriceFill" style="width: 26%"></div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
         </div>
         <div class="compareTopPanel bottomPos">
           <div class="compareCostLong">

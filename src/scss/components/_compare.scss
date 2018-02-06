@@ -21,6 +21,9 @@
     }
   }
 }
+.footy-compare {
+  display: none;
+}
 .compareArea {
   border-radius: 10px;
   overflow: hidden;
@@ -205,8 +208,5 @@
         }
       }
     }
-  }
-  .showit {
-    display: block !important;
   }
 }

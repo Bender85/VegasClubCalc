@@ -39,13 +39,14 @@ window.leagues = {
         },
         drinks: {
           shot: '18.00',
-          champagne: '600.00',
+          champane: '600.00',
           beer: '13.00',
         },
         extras: {
           tableService: '1.800',
           cloakroom: '10.00',
-          parking: '15 for over 4 hours'
+          // parking: '15 for over 4 hours'
+          parking: '15.00'
         },
         otherprices: 'wather  $10',
         // total: '187.50'
@@ -61,13 +62,14 @@ window.leagues = {
         },
         drinks: {
           shot: '20.00',
-          champagne: '595.00',
+          champane: '595.00',
           beer: '15.00',
         },
         extras: {
           tableService: '1.700',
           cloakroom: '10.00',
-          parking: '12 for over 4 hours'
+          // parking: '12 for over 4 hours'
+          parking: '12.00'
         },
         otherprices: 'n/a',
         // total: '187.50'
@@ -83,13 +85,14 @@ window.leagues = {
         },
         drinks: {
           shot: '20.00',
-          champagne: '595.00',
+          champane: '595.00',
           beer: '10.00',
         },
         extras: {
           tableService: '1.700',
           cloakroom: '10.00',
-          parking: '10 for over 4 hours'
+          // parking: '10 for over 4 hours'
+          parking: '10.00'
         },
         otherprices: 'wather $10',
         // total: '187.50'
@@ -105,13 +108,14 @@ window.leagues = {
         },
         drinks: {
           shot: '20.00',
-          champagne: '595.00',
+          champane: '595.00',
           beer: '10.00',
         },
         extras: {
           tableService: '2.000',
           cloakroom: '10.00',
-          parking: '20 for over 4 hours'
+          // parking: '20 for over 4 hours'
+          parking: '20.00'
         },
         otherprices: 'wather $11',
         // total: '187.50'
@@ -127,13 +131,14 @@ window.leagues = {
         },
         drinks: {
           shot: '18.00',
-          champagne: '495.00',
+          champane: '495.00',
           beer: '8.00',
         },
         extras: {
           tableService: '1.500',
           cloakroom: '10.00',
-          parking: '15 for over 4 hours'
+          // parking: '15 for over 4 hours'
+          parking: '15.00'
         },
         otherprices: 'n/a',
         // total: '187.50'

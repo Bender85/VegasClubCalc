@@ -75,6 +75,11 @@
   .iconCheckActive {
     background: #8dc20c;
   }
+  .extrasTrigger {
+    &:hover {
+      cursor: pointer;
+    }
+  }
   .counterIcon {
     height: 100%;
     display: flex;
